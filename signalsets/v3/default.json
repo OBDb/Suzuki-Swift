@@ -1,4 +1,56 @@
 { "commands": [
-
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "21"}, "freq": 1, "dbgfilter": { "to": 2018, "from": 2021 },
+  "signals": [
+    {"id": "SWIFT_CC_VSS",                      "path": "Cruise control", "fmt": {           "len": 8, "max": 255,                                                      "unit": "kilometersPerHour" }, "name": "Cruise control speed"},
+    {"id": "SWIFT_CC_S",                        "path": "Cruise control", "fmt": {"bix": 8,  "len": 8, "max": 255,                                                      "unit": "kilometersPerHour" }, "name": "Cruise control speed"},
+    {"id": "SWIFT_CC_DRIVING_FORCE",            "path": "Cruise control", "fmt": {"bix": 16, "len": 8, "max": 50.8, "min": -51.2, "mul": 102, "div": 255, "add": -51.2, "unit": "scalar"            }, "name": "Requested driving force"},
+    {"id": "SWIFT_CC_ON",                       "path": "Cruise control", "fmt": {"bix": 24, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Cruise control, on"},
+    {"id": "SWIFT_CC_CC_ON",                    "path": "Cruise control", "fmt": {"bix": 25, "len": 1, "max": 1,                                                        "unit": "noyes"             }, "name": "Cruise control, activated?"},
+    {"id": "SWIFT_CC_CCS_INDICATOR_M_CPU_ON",   "path": "Cruise control", "fmt": {"bix": 26, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Cruise control indicator"},
+    {"id": "SWIFT_CC_CCS_READY_M_CPU_ON",       "path": "Cruise control", "fmt": {"bix": 28, "len": 1, "max": 1,                                                        "unit": "noyes"             }, "name": "Cruise control ready?"},
+    {"id": "SWIFT_CC_MAIN_SW_M_CPU_ON",         "path": "Cruise control", "fmt": {"bix": 30, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Cruise control, main switch"},
+    {"id": "SWIFT_CC_STOP_LIGHT_SWITCH_1_ON",   "path": "Lights",         "fmt": {"bix": 32, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Cruise control stop light switch 1"},
+    {"id": "SWIFT_CC_STOP_LIGHT_SWITCH_2_ON",   "path": "Lights",         "fmt": {"bix": 33, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Cruise control stop light switch 2"},
+    {"id": "SWIFT_CC_RES_ACC_SWITCH_ON",        "path": "Cruise control", "fmt": {"bix": 35, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Resume/accelerate switch"},
+    {"id": "SWIFT_CC_LIVE_SET_COAST_SWITCH_ON", "path": "Cruise control", "fmt": {"bix": 36, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Coast switch"},
+    {"id": "SWIFT_CC_CANCEL_SWITCH_ON",         "path": "Cruise control", "fmt": {"bix": 37, "len": 1, "max": 1,                                                        "unit": "offon"             }, "name": "Cancel switch"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "25"}, "freq": 1, "dbgfilter": { "to": 2018, "from": 2021 },
+  "signals": [
+    {"id": "SWIFT_POWER_STEERING_SIGNAL",                   "path": "Control", "fmt": {"bix": 4,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Power steering"},
+    {"id": "SWIFT_STOP_LIGHT_SWITCH",                       "path": "Lights",  "fmt": {"bix": 5,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Stop light"},
+    {"id": "SWIFT_CRUISE_CONTROL_LIVE_BRAKE_CANCEL_SWITCH", "path": "Control", "fmt": {"bix": 6,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Cruise control live brake cancel"},
+    {"id": "SWIFT_STARTER_SIGNAL",                          "path": "Control", "fmt": {"bix": 11, "len": 1, "max": 1, "unit": "scalar" }, "name": "Starter signal"},
+    {"id": "SWIFT_STARTER_CONTROL",                         "path": "Control", "fmt": {"bix": 12, "len": 1, "max": 1, "unit": "scalar" }, "name": "Starter control"},
+    {"id": "SWIFT_ELECTRICAL_LOAD_SIGNAL_1",                "path": "Control", "fmt": {"bix": 16, "len": 1, "max": 1, "unit": "scalar" }, "name": "Electrical load signal 1"},
+    {"id": "SWIFT_ELECTRICAL_LOAD_SIGNAL_2",                "path": "Control", "fmt": {"bix": 17, "len": 1, "max": 1, "unit": "scalar" }, "name": "Electrical load signal 2"},
+    {"id": "SWIFT_SHIFT_SW_STATUS_P_RANGE",                 "path": "Control", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, parking"},
+    {"id": "SWIFT_SHIFT_SW_STATUS_R_RANGE",                 "path": "Control", "fmt": {"bix": 25, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, reverse"},
+    {"id": "SWIFT_SHIFT_SW_STATUS_N_RANGE",                 "path": "Control", "fmt": {"bix": 26, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, neutral"},
+    {"id": "SWIFT_SHIFT_SW_STATUS_D_RANGE",                 "path": "Control", "fmt": {"bix": 27, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, drive"},
+    {"id": "SWIFT_SPORTS_MODE_SELECTION_SW",                "path": "Control", "fmt": {"bix": 32, "len": 1, "max": 1, "unit": "scalar" }, "name": "Sports mode selection"},
+    {"id": "SWIFT_SPORTS_SHIFT_UP_SW",                      "path": "Control", "fmt": {"bix": 33, "len": 1, "max": 1, "unit": "scalar" }, "name": "Sports shift up"},
+    {"id": "SWIFT_SPORTS_SHIFT_DOWN_SW",                    "path": "Control", "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "scalar" }, "name": "Sports shift down"},
+    {"id": "SWIFT_PATTERN_SWITCH_PWR_M",                    "path": "Control", "fmt": {"bix": 42, "len": 1, "max": 1, "unit": "scalar" }, "name": "Pattern switch"},
+    {"id": "SWIFT_NEUTRAL_POSITION_SW_SIGNAL",              "path": "Control", "fmt": {"bix": 53, "len": 1, "max": 1, "unit": "scalar" }, "name": "Neutral position"},
+    {"id": "SWIFT_TC_TERMINAL",                             "path": "Control", "fmt": {"bix": 61, "len": 1, "max": 1, "unit": "scalar" }, "name": "TC"},
+    {"id": "SWIFT_A_C_COMPRESSOR",                          "path": "Control", "fmt": {"bix": 64, "len": 1, "max": 1, "unit": "offon"  }, "name": "A/C compressor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "28"}, "freq": 5, "dbgfilter": { "to": 2018, "from": 2021 },
+  "signals": [
+    {"id": "SWIFT_2128_RAW", "path": "ECU", "fmt": { "len": 24, "max": 16777214, "nullmax": 16777214, "unit": "scalar" }, "name": "Engine module 2128 first value, raw"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "45"}, "freq": 1, "dbgfilter": { "to": 2018, "from": 2021 },
+  "signals": [
+    {"id": "SWIFT_MISFIRE_RPM_V2",            "path": "Engine",          "fmt": {"bix": 8,  "len": 8,  "max": 6375,               "mul": 25,                                            "unit": "rpm"     }, "name": "Misfire RPM"},
+    {"id": "SWIFT_MISFIRE_LOAD_V2",           "path": "Engine.Misfires", "fmt": {"bix": 16, "len": 8,  "max": 3.98,               "mul": 4,  "div": 256,                                "unit": "scalar"  }, "name": "Misfire load"},
+    {"id": "SWIFT_CYL1_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 24, "len": 8,  "max": 254,                                                    "nullmax": 254,   "unit": "scalar"  }, "name": "Cylinder #1 misfire count"},
+    {"id": "SWIFT_CYL2_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 32, "len": 8,  "max": 254,                                                    "nullmax": 254,   "unit": "scalar"  }, "name": "Cylinder #2 misfire count"},
+    {"id": "SWIFT_CYL3_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 40, "len": 8,  "max": 254,                                                    "nullmax": 254,   "unit": "scalar"  }, "name": "Cylinder #3 misfire count"},
+    {"id": "SWIFT_CYL4_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 48, "len": 8,  "max": 254,                                                    "nullmax": 254,   "unit": "scalar"  }, "name": "Cylinder #4 misfire count"},
+    {"id": "SWIFT_ALL_CYLINDERS_MISFIRE_CNT", "path": "Engine.Misfires", "fmt": {"bix": 56, "len": 8,  "max": 254,                                                    "nullmax": 254,   "unit": "scalar"  }, "name": "All cylinders misfire count"},
+    {"id": "SWIFT_IGNITION_TRIG_CNT",         "path": "Control",         "fmt": {"bix": 64, "len": 16, "max": 65534,                                                  "nullmax": 65534, "unit": "scalar"  }, "name": "Ignition trigger count"},
+    {"id": "SWIFT_MISFIRE_MARGIN_V2",         "path": "Engine.Misfires", "fmt": {"bix": 80, "len": 8,  "max": 127,   "min": -128,                        "add": -128,                   "unit": "percent" }, "name": "Misfire margin"}
+  ]}
 ]
 }
