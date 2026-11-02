@@ -44,6 +44,9 @@ supported_commands_by_ecu:
   - 0147:TP_B
   - 0149:APP_D
   - 014A:APP_E
+  - 014C:TAC_PCT
+  - 015E:FUEL_RATE
+  - 019D:FUEL_RATE_ALT,VFUEL_RATE
   - 7E0.0111:TP
   - 7E0.0131:CLR_DIST
 unsupported_commands_by_ecu:

@@ -31,3 +31,6 @@ supported_commands_by_ecu:
   - 0147:TP_B
   - 0149:APP_D
   - 014A:APP_E
+  - 014C:TAC_PCT
+  - 015E:FUEL_RATE
+  - 019D:FUEL_RATE_ALT,VFUEL_RATE
